@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://Raqueta.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=3]
+[ext_resource path="res://CanvasLayer.tscn" type="PackedScene" id=4]
+
+[node name="Main" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Raqueta1" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="Raqueta2" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 968, 260 )
+
+[node name="Ball" parent="." index="2" instance=ExtResource( 3 )]
+
+gravity = 0.0
+
+[node name="Position2D" type="Position2D" parent="." index="3"]
+
+[node name="CanvasLayer" parent="." index="4" instance=ExtResource( 4 )]
+
+[connection signal="score1" from="Ball" to="." method="_on_Ball_score1"]
+
+[connection signal="score2" from="Ball" to="." method="_on_Ball_score2"]
+
+
