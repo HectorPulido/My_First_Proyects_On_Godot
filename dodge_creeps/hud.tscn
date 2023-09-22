@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://btmsmkpsbdq27"]
+
+[ext_resource type="FontFile" uid="uid://5lm7ufa6cpmn" path="res://fonts/Xolonium-Regular.ttf" id="1_dr2cb"]
+[ext_resource type="Script" path="res://scripts/Hud.cs" id="1_mrxs0"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_mrxs0")
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 81.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_dr2cb")
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Message" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_dr2cb")
+theme_override_font_sizes/font_size = 64
+text = "Dodge the creeps!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="MessageTimer" type="Timer" parent="."]
+
+[node name="StartButton" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 100)
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 140.0
+offset_top = -140.0
+offset_right = -140.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_dr2cb")
+theme_override_font_sizes/font_size = 64
+text = "Start"
+
+[connection signal="pressed" from="StartButton" to="." method="OnStartButtonPressed"]

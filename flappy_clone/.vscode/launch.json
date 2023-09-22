@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      //https://github.com/godotengine/godot-csharp-vscode/issues/43#issuecomment-1258321229
+      {
+        "name": "Play",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        // Change by your Godot path
+        "program": "/Applications/Godot_mono.app/Contents/MacOS/Godot", 
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "stopAtEntry": false,
+      }
+    ]
+  }

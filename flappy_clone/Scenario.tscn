@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgygwxq8o4w7a"]
+
+[ext_resource type="PackedScene" uid="uid://q3s2ohfpgrog" path="res://flappy.tscn" id="1_7yn43"]
+[ext_resource type="PackedScene" uid="uid://ddygf8suqbqtr" path="res://background.tscn" id="2_kwjvh"]
+[ext_resource type="Script" path="res://Scripts/Spawner.cs" id="3_lh1u7"]
+[ext_resource type="PackedScene" uid="uid://dr8500y2ebwle" path="res://pipes.tscn" id="4_8vvw3"]
+
+[node name="Node2D" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [413.0]
+
+[node name="Flappy" parent="." instance=ExtResource("1_7yn43")]
+
+[node name="Background" parent="." instance=ExtResource("2_kwjvh")]
+
+[node name="Spawner" type="Node2D" parent="."]
+process_mode = 1
+script = ExtResource("3_lh1u7")
+initialSpawn = 350.0
+spawnCount = 3
+Pipes = ExtResource("4_8vvw3")

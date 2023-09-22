@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfuuvcm473bee"]
+
+[ext_resource type="Script" path="res://Scripts/Raqueta.cs" id="1_nw5hx"]
+[ext_resource type="Texture2D" uid="uid://ciedcblhs577e" path="res://Sprites/PONG.png" id="2"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(16, 106)
+
+[node name="Raqueta" type="CharacterBody2D"]
+position = Vector2(108, 260)
+script = ExtResource("1_nw5hx")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, 2.08165e-12)
+scale = Vector2(0.2, 1.92)
+texture = ExtResource("2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.08165e-12)
+shape = SubResource("1")

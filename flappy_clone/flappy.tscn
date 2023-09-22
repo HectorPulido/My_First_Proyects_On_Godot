@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://q3s2ohfpgrog"]
+
+[ext_resource type="Texture2D" uid="uid://rn8xiafsgxxl" path="res://Images/flappy.png" id="1_2swsc"]
+[ext_resource type="Script" path="res://Scripts/Flappy.cs" id="1_pqybu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1w3v6"]
+radius = 13.4536
+
+[node name="Flappy" type="CharacterBody2D"]
+script = ExtResource("1_pqybu")
+JumpVelocity = 6.0
+
+[node name="FlappySprite" type="Sprite2D" parent="."]
+position = Vector2(1.87018e-20, 2.9439e-12)
+rotation = 0.785398
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_2swsc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 5.00652e-08)
+rotation = 0.785398
+shape = SubResource("CircleShape2D_1w3v6")
+one_way_collision_margin = 0.0
+
+[node name="StartingPoint" type="Marker2D" parent="."]
+position = Vector2(118, 184)

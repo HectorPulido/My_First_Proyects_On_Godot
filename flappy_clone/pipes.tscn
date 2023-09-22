@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr8500y2ebwle"]
+
+[ext_resource type="Script" path="res://Scripts/Pipes.cs" id="1_237xv"]
+[ext_resource type="Texture2D" uid="uid://cngdrlqrh5lig" path="res://Images/pipe.png" id="1_o34l0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h07ar"]
+size = Vector2(53, 325)
+
+[node name="Pipes" type="StaticBody2D" groups=["Pipes"]]
+z_index = 1
+z_as_relative = false
+position = Vector2(2.08165e-12, 2.08165e-12)
+script = ExtResource("1_237xv")
+jumpPosition = 600.0
+randomYRange = Vector2(150, 300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.08165e-12, -217.5)
+shape = SubResource("RectangleShape2D_h07ar")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+z_index = -1
+position = Vector2(-0.5, 4.5)
+texture = ExtResource("1_o34l0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(2.08165e-12, 214)
+shape = SubResource("RectangleShape2D_h07ar")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D2"]
+z_index = -1
+position = Vector2(0, -1)
+rotation = 3.14159
+texture = ExtResource("1_o34l0")

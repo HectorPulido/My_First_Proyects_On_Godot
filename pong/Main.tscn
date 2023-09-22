@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm0q1cm2wy12g"]
+
+[ext_resource type="PackedScene" uid="uid://dfuuvcm473bee" path="res://Raqueta.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bt4orfvck8p63" path="res://Ball.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://ciyvodqc6jbco" path="res://CanvasLayer.tscn" id="4"]
+[ext_resource type="Script" path="res://Scripts/ScoreUI.cs" id="4_vyijn"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Raqueta1" parent="." instance=ExtResource("2")]
+
+[node name="Raqueta2" parent="." instance=ExtResource("2")]
+position = Vector2(968, 260)
+Speed = 200.0
+IsAI = true
+
+[node name="Ball" parent="." instance=ExtResource("3")]
+gravity = 0.0
+speed = 500.0
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4")]
+script = ExtResource("4_vyijn")
+
+[connection signal="Score" from="Ball" to="CanvasLayer" method="OnScore"]

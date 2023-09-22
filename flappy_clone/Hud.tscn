@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnb8al6xkv0m5"]
+
+[ext_resource type="Texture2D" uid="uid://ighbwlr7rgvs" path="res://Images/click_image.png" id="1_e11kr"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.5
+offset_top = -22.0
+offset_right = 22.5
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_e11kr")
+expand_mode = 2
+stretch_mode = 3
